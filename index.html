@@ -12,6 +12,16 @@
             background-color: #f0f0f0;
             color: #333;
             text-align: center;
+            overflow-y: scroll; /* Always show vertical scrollbar */
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px; /* Set the width of the scrollbar */
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #009900; /* Set the color of the scrollbar thumb */
+            border-radius: 6px; /* Round the corners of the thumb */
         }
 
         nav {
@@ -73,3 +83,4 @@
     </div>
 </body>
 </html>
+
