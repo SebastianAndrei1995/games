@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Download modern and exciting games.">
-    <meta name="keywords" content="games, download, modern, play, fun">
-    <title> Modern Games </title>
+    <meta name="description" content="Descarcă jocuri moderne și captivante.">
+    <meta name="keywords" content="jocuri, descărcare, moderne, joacă, distracție">
+    <title> Jocuri Moderne </title>
     <style>
-        /* Your existing styles here */
+        /* Stilurile existente aici */
 
-        /* Responsive design adjustments */
+        /* Ajustări pentru design responsiv */
         @media (max-width: 768px) {
             nav a {
                 font-size: 16px;
@@ -36,12 +36,28 @@
         h1 {
             margin-top: 20px;
         }
+
+        /* Stiluri pentru galeria de imagini */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            margin: 5px;
+            border: 2px solid #ccc;
+            width: 150px;
+            height: auto;
+        }
+        .gallery img:hover {
+            border-color: #777;
+        }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
+        <a href="#home">Acasă</a>
+        <a href="#about">Despre</a>
         <a href="#contact">Contact</a>
     </nav>
     <h1>Bine ai venit pe Pagina Mea de Jocuri!</h1>
@@ -50,15 +66,21 @@
         <li><a href="https://www.amazon.com/gp/product/B0CTTTRTBV">Bow Master</a></li>
         <li><a href="#">Jocul 2</a></li>
     </ul>
+
+    <!-- Galeria de imagini -->
+    <div class="gallery">
+        <img src="calea-catre-imagine1.jpg" alt="Descriere Imagine 1">
+        <img src="calea-catre-imagine2.jpg" alt="Descriere Imagine 2">
+        <img src="calea-catre-imagine3.jpg" alt="Descriere Imagine 3">
+        <!-- Adaugă mai multe imagini după același model -->
+    </div>
+
     <div class="game-description">
         <h2>Bow Master</h2>
         <p>Un joc captivant de tir cu arcul care îți testează precizia și rapiditatea. Descarcă și joacă acum pentru a deveni maestrul arcului!</p>
-        <!-- Add similar sections for other games -->
+        <!-- Adaugă descrieri similare pentru alte jocuri -->
     </div>
     <a href="#" class="cta-button">Descarcă acum!</a>
-
-    <!-- Accessibility improvements -->
-    <img src="game-thumbnail.jpg" alt="Thumbnail of Bow Master game">
 </body>
 </html>
 
