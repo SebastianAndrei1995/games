@@ -10,7 +10,7 @@
         /* Stilurile pentru meniu și numele companiei */
         nav {
             background-color: #333;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
 
@@ -31,15 +31,22 @@
             z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
         }
 
-        #company-name .first-word {
-            color: red; /* Culorea primului cuvânt în roșu */
+        .word-container {
+            display: inline-block;
+            padding: 5px 10px; /* Adaugă spațiu în jurul cuvântelor */
+            border-radius: 5px; /* Rotunjirea colțurilor chenarului */
+            margin-right: 5px; /* Spațiere între cuvinte */
         }
 
-        #company-name .second-word {
-            color: #777; /* Culorea celui de-al doilea cuvânt în gri */
+        .sebi {
+            background-color: red; /* Culorea chenarului pentru cuvântul "Sebi" */
         }
 
-        #company-name .software {
+        .lex {
+            background-color: #ccc; /* Culorea chenarului pentru cuvântul "Lex" */
+        }
+
+        .software {
             font-size: 18px; /* Dimensiunea fontului pentru textul "Software" */
             display: block; /* Afișează "Software" pe o linie nouă */
         }
@@ -50,7 +57,8 @@
 </head>
 <body>
     <div id="company-name">
-        <span class="first-word">Sebi</span> <span class="second-word">Lex</span>
+        <span class="word-container sebi">Sebi</span>
+        <span class="word-container lex">Lex</span>
         <span class="software">Software</span>
     </div>
     <nav>
