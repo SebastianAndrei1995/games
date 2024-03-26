@@ -7,19 +7,7 @@
     <meta name="keywords" content="jocuri, descărcare, moderne, joacă, distracție">
     <title> Jocuri Moderne </title>
     <style>
-        /* Stilurile existente aici */
-
-        /* Ajustări pentru design responsiv */
-        @media (max-width: 768px) {
-            nav a {
-                font-size: 16px;
-                margin: 0 10px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-        }
-
+        /* Stilurile pentru meniu și numele companiei */
         nav {
             background-color: #333;
             padding: 10px;
@@ -33,28 +21,24 @@
             font-size: 18px;
         }
 
-        h1 {
-            margin-top: 20px;
+        #company-name {
+            position: absolute;
+            top: 20px; /* Ajustează distanța față de partea superioară a paginii */
+            left: 20px; /* Ajustează distanța față de partea stângă a paginii */
+            font-size: 24px; /* Ajustează mărimea fontului */
+            color: #fff; /* Schimbă culoarea textului, dacă este necesar */
+            font-weight: bold; /* Adaugă greutate fontului, dacă este necesar */
+            z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
         }
 
-        /* Stiluri pentru galeria de imagini */
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .gallery img {
-            margin: 5px;
-            border: 2px solid #ccc;
-            width: 150px;
-            height: auto;
-        }
-        .gallery img:hover {
-            border-color: #777;
-        }
+        /* Restul stilurilor existente */
+        /* ... */
     </style>
 </head>
 <body>
+    <div id="company-name">
+        Numele Companiei Tale
+    </div>
     <nav>
         <a href="#home">Acasă</a>
         <a href="#about">Despre</a>
