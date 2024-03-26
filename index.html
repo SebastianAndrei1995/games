@@ -31,14 +31,27 @@
             z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
         }
 
+        #company-name .first-word {
+            color: red; /* Culorea primului cuvânt în roșu */
+        }
+
+        #company-name .second-word {
+            color: #777; /* Culorea celui de-al doilea cuvânt în gri */
+        }
+
+        #company-name .software {
+            font-size: 18px; /* Dimensiunea fontului pentru textul "Software" */
+            display: block; /* Afișează "Software" pe o linie nouă */
+        }
+
         /* Restul stilurilor existente */
         /* ... */
     </style>
 </head>
 <body>
     <div id="company-name">
-        Sebi Lex 
-        Software
+        <span class="first-word">Sebi</span> <span class="second-word">Lex</span>
+        <span class="software">Software</span>
     </div>
     <nav>
         <a href="#home">Acasă</a>
