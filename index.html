@@ -21,21 +21,23 @@
             font-size: 30px;
         }
 
-        #company-name {
-            position: absolute;
-            top: 20px; /* Ajustează distanța față de partea superioară a paginii */
-            left: 20px; /* Ajustează distanța față de partea stângă a paginii */
-            font-size: 24px; /* Ajustează mărimea fontului */
-            color: #fff; /* Schimbă culoarea textului, dacă este necesar */
-            font-weight: bold; /* Adaugă greutate fontului, dacă este necesar */
-            z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
-        }
+       #company-name {
+    position: absolute;
+    top: 50%; /* Așază elementul la jumătatea înălțimii ferestrei */
+    left: 50%; /* Așază elementul la jumătatea lățimii ferestrei */
+    transform: translate(-50%, -50%); /* Centrează elementul */
+    font-size: 24px; /* Ajustează mărimea fontului */
+    color: #fff; /* Culorea textului */
+    font-weight: bold; /* Grosimea fontului */
+    z-index: 999; /* Asigură-te că textul este afișat deasupra altor elemente */
+}
+
 
         .word-container {
             display: inline-block;
             padding: 2px 5px; /* Adaugă spațiu în jurul cuvântelor */
             border-radius: 5px; /* Rotunjirea colțurilor chenarului */
-            margin-right: 0,2px; /* Spațiere între cuvinte */
+            margin-right: 0.2px; /* Spațiere între cuvinte */
         }
 
         .sebi {
