@@ -7,18 +7,78 @@
     <meta name="keywords" content="jocuri, descărcare, moderne, joacă, distracție">
     <title> Sebi Lex Software - Android Games </title>
     <style>
-        /* Your CSS styles */
+        /* Stilurile pentru meniu și numele companiei */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0; /* Set the left to 0 */
+    background-color: #333;
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+     }
+
+
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+      #company-name {
+    position: absolute;
+    top: 9%; /* Așază elementul la jumătatea înălțimii chenarului */
+    left: 10px; /* Ajustează distanța de la marginea stângă */
+    transform: translateY(-50%); /* Ajustează vertical poziția în funcție de înălțimea elementului */
+    font-size: 24px; /* Ajustează mărimea fontului */
+    color: #fff; /* Schimbă culoarea textului, dacă este necesar */
+    font-weight: bold; /* Adaugă greutate fontului, dacă este necesar */
+    z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
+    padding: 10px; /* Adaugă spațiul intern (padding) în jurul textului */
+    text-transform: uppercase; /* Transformă textul în litere mari */
+}
+
+
+        .word-container {
+            display: inline-block;
+            padding: 2px 5px; /* Adaugă spațiu în jurul cuvântelor */
+            border-radius: 5px; /* Rotunjirea colțurilor chenarului */
+            margin-right: .2px; /* Spațiere între cuvinte */
+        }
+
+        .sebi {
+            background-color: red; /* Culorea chenarului pentru cuvântul "Sebi" */
+        }
+
+        .lex {
+            background-color: #ccc; /* Culorea chenarului pentru cuvântul "Lex" */
+        }
+
+      .software {
+    color: red; /* Change the color to red */
+    font-size: 18px; /* Dimensiunea fontului pentru textul "software" */
+    display: block; /* Afișează "Software" pe o linie nouă */
+    position: absolute; /* Poziționează absolut elementul */
+    top: 40px; /* Ajustează distanța față de partea de sus */
+    left: 20px; /* Ajustează distanța față de stânga */
+}
+
+        /* Restul stilurilor existente */
         /* ... */
     </style>
 </head>
 <body>
     <div id="company-name">
-        <!-- Your company name HTML -->
-        <!-- ... -->
+        <span class="word-container sebi">Sebi</span>
+        <span class="word-container lex">Lex</span>
+        <span class="software">Software</span>
     </div>
     <nav>
-        <!-- Your navigation menu HTML -->
-        <!-- ... -->
+        <a href="#home">Acasă</a>
+        <a href="#about">Despre</a>
+        <a href="#contact">Contact</a>
     </nav>
     <h1>Bine ai venit pe Pagina Mea de Jocuri!</h1>
     <p>Descarcă jocurile mele aici:</p>
@@ -27,19 +87,19 @@
         <li><a href="#">Jocul 2</a></li>
     </ul>
 
-    <!-- Your image gallery -->
+    <!-- Galeria de imagini -->
     <div class="gallery">
         <img src="https://imgur.com/a/pnU8Pll" alt="Descriere Imagine 1">
         <img src="https://imgur.com/a/pnU8Pll" alt="Descriere Imagine 2">
-        <img src="https://imgur.com/a/pnU8Pll" alt="Descriere Imagine 3">
-        <!-- Add more images as needed -->
+        <img src="https://imgur.com/a/pnU8Plll" alt="Descriere Imagine 3">
+        <!-- Adaugă mai multe imagini după același model -->
     </div>
 
     <div class="game-description">
-        <!-- Your game description HTML -->
-        <!-- ... -->
+        <h2>Bow Master</h2>
+        <p>Un joc captivant de tir cu arcul care îți testează precizia și rapiditatea. Descarcă și joacă acum pentru a deveni maestrul arcului!</p>
+        <!-- Adaugă descrieri similare pentru alte jocuri -->
     </div>
     <a href="#" class="cta-button">Descarcă acum!</a>
 </body>
 </html>
-
