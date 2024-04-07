@@ -32,17 +32,18 @@
             font-size: 20px; /* Reduced font size for smaller screens */
         }
 
-  #company-name {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
+ #company-name {
+    position: absolute;
+    top: 50%; /* Poziționează la mijlocul înălțimii barei */
+    left: 50%; /* Poziționează la mijlocul lățimii barei */
+    transform: translate(-50%, -50%); /* Centrează elementul */
     font-size: 20px;
     color: #fff;
     font-weight: bold;
     z-index: 999;
     text-transform: uppercase;
 }
+
 
 
 
