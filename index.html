@@ -3,70 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descarcă jocuri moderne și captivante.">
-    <meta name="keywords" content="jocuri, descărcare, moderne, joacă, distracție">
-    <title> Sebi Lex Software - Android Games </title>
+    <meta name="description" content="Download modern and captivating games.">
+    <meta name="keywords" content="games, download, modern, play, fun">
+    <title>Sebi Lex Software - Android Games</title>
     <style>
-        /* Stilurile pentru meniu și numele companiei */
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0; /* Set the left to 0 */
-    background-color: #333;
-    padding: 40px;
-    text-align: center;
-    width: 100%;
-     }
+        /* Common styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-
+        /* Navigation styles */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding: 20px; /* Reduced padding for smaller screens */
+            text-align: center;
+            width: 100%;
+        }
 
         nav a {
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 30px;
+            font-size: 20px; /* Reduced font size for smaller screens */
         }
 
-      #company-name {
-     position: fixed;
-    top: 7%; /* Așază elementul la jumătatea înălțimii chenarului */
-    left: 10px; /* Ajustează distanța de la marginea stângă */
-    transform: translateY(-50%); /* Ajustează vertical poziția în funcție de înălțimea elementului */
-    font-size: 24px; /* Ajustează mărimea fontului */
-    color: #fff; /* Schimbă culoarea textului, dacă este necesar */
-    font-weight: bold; /* Adaugă greutate fontului, dacă este necesar */
-    z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
-    padding: 10px; /* Adaugă spațiul intern (padding) în jurul textului */
-    text-transform: uppercase; /* Transformă textul în litere mari */
-}
-
-
-        .word-container {
-            display: inline-block;
-            padding: 1px 3px; /* Adaugă spațiu în jurul cuvântelor */
-            border-radius: 5px; /* Rotunjirea colțurilor chenarului */
-            margin-right: .2px; /* Spațiere între cuvinte */
+        /* Company name styles */
+        #company-name {
+            position: fixed;
+            top: 50px; /* Adjusted top position */
+            left: 10px;
+            transform: translateY(-50%);
+            font-size: 20px; /* Reduced font size for smaller screens */
+            color: #fff;
+            font-weight: bold;
+            z-index: 999;
+            padding: 10px;
+            text-transform: uppercase;
         }
 
-        .sebi {
-            background-color: red; /* Culorea chenarului pentru cuvântul "Sebi" */
+        /* Gallery styles */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px; /* Adjusted margin for smaller screens */
         }
 
-        .lex {
-            background-color: #ccc; /* Culorea chenarului pentru cuvântul "Lex" */
+        .gallery img {
+            margin: 0 10px; /* Adjusted spacing between images */
         }
 
-      .software {
-    color: red; /* Change the color to red */
-    font-size: 15px; /* Dimensiunea fontului pentru textul "software" */
-    display: block; /* Afișează "Software" pe o linie nouă */
-    position: absolute; /* Poziționează absolut elementul */
-    top: 40px; /* Ajustează distanța față de partea de sus */
-    left: 20px; /* Ajustează distanța față de stânga */
-}
+        /* Game description styles */
+        .game-description {
+            text-align: center;
+            margin-top: 50px; /* Adjusted margin for smaller screens */
+        }
 
-        /* Restul stilurilor existente */
-        /* ... */
+        /* Call-to-action button styles */
+        .cta-button {
+            display: block;
+            width: 200px; /* Fixed width for button */
+            margin: 50px auto; /* Centered button with adjusted margin */
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 768px) {
+            nav {
+                padding: 10px; /* Further reduced padding for smaller screens */
+            }
+            nav a {
+                font-size: 16px; /* Further reduced font size for smaller screens */
+            }
+            #company-name {
+                font-size: 16px; /* Further reduced font size for smaller screens */
+            }
+            .gallery {
+                flex-direction: column; /* Stack images vertically on smaller screens */
+            }
+            .game-description {
+                margin-top: 30px; /* Adjusted margin for smaller screens */
+            }
+            .cta-button {
+                width: 150px; /* Reduced width for smaller screens */
+                margin-top: 30px; /* Adjusted margin for smaller screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -76,30 +107,29 @@
         <span class="software">Software</span>
     </div>
     <nav>
-        <a href="#home">Acasă</a>
-        <a href="#about">Despre</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
-    <h1>Bine ai venit pe Pagina Mea de Jocuri!</h1>
-    <p>Descarcă jocurile mele aici:</p>
+    <h1>Welcome to My Games Page!</h1>
+    <p>Download my games here:</p>
     <ul>
         <li><a href="https://www.amazon.com/gp/product/B0CTTTRTBV">Bow Master</a></li>
-        <li><a href="#">Jocul 2</a></li>
+        <li><a href="#">Game 2</a></li> <!-- Placeholder link -->
     </ul>
 
-    <!-- Galeria de imagini -->
+    <!-- Gallery of images -->
     <div class="gallery">
-        <img src="https://github.com/SebastianAndrei1995/games/blob/main/1080.jpeg?raw=true" alt="nu merge" width="300" height="150">
-        <img src="https://imgur.com/a/pnU8Pll" alt="Descriere Imagine 2">
-        <img src="https://imgur.com/a/pnU8Plll" alt="Descriere Imagine 3">
-        <!-- Adaugă mai multe imagini după același model -->
+        <img src="https://github.com/SebastianAndrei1995/games/blob/main/1080.jpeg?raw=true" alt="Bow Master Screenshot" width="300" height="150">
+        <!-- Add more images with proper src and alt attributes -->
     </div>
 
     <div class="game-description">
         <h2>Bow Master</h2>
-        <p>Un joc captivant de tir cu arcul care îți testează precizia și rapiditatea. Descarcă și joacă acum pentru a deveni maestrul arcului!</p>
-        <!-- Adaugă descrieri similare pentru alte jocuri -->
+        <p>A captivating archery game that tests your precision and speed. Download and play now to become the master archer!</p>
+        <!-- Add similar descriptions for other games -->
     </div>
-    <a href="#" class="cta-button">Descarcă acum!</a>
+    <a href="#" class="cta-button">Download Now!</a>
 </body>
 </html>
+
