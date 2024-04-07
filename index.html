@@ -20,7 +20,7 @@
             top: 0;
             left: 0;
             background-color: #333;
-            padding: 30px; /* Reduced padding for smaller screens */
+            padding: 30px;
             text-align: center;
             width: 100%;
         }
@@ -29,70 +29,53 @@
             color: #fff;
             margin: 0 15px;
             text-decoration: none;
-            font-size: 20px; /* Reduced font size for smaller screens */
+            font-size: 20px;
         }
 
         #company-name {
-     position: fixed;
-    top: 7%; /* Așază elementul la jumătatea înălțimii chenarului */
-    left: 10px; /* Ajustează distanța de la marginea stângă */
-    transform: translateY(-50%); /* Ajustează vertical poziția în funcție de înălțimea elementului */
-    font-size: 20px; /* Ajustează mărimea fontului */
-    color: #fff; /* Schimbă culoarea textului, dacă este necesar */
-    font-weight: bold; /* Adaugă greutate fontului, dacă este necesar */
-    z-index: 999; /* Asigură-te că numele companiei este întotdeauna deasupra altor elemente */
-    padding: 10px; /* Adaugă spațiul intern (padding) în jurul textului */
-    text-transform: uppercase; /* Transformă textul în litere mari */
-}
-
-
-        .word-container {
-            display: inline-block;
-            padding: 1px 3px; /* Adaugă spațiu în jurul cuvântelor */
-            border-radius: 5px; /* Rotunjirea colțurilor chenarului */
-            margin-right: .2px; /* Spațiere între cuvinte */
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            z-index: 999;
+            padding: 10px;
+            text-transform: uppercase;
         }
 
-        .sebi {
-            background-color: red; /* Culorea chenarului pentru cuvântul "Sebi" */
+        .software {
+            color: red;
+            font-size: 15px;
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: 20px;
         }
-
-        .lex {
-            background-color: #ccc; /* Culorea chenarului pentru cuvântul "Lex" */
-        }
-
-      .software {
-    color: red; /* Change the color to red */
-    font-size: 15px; /* Dimensiunea fontului pentru textul "software" */
-    display: block; /* Afișează "Software" pe o linie nouă */
-    position: absolute; /* Poziționează absolut elementul */
-    top: 40px; /* Ajustează distanța față de partea de sus */
-    left: 20px; /* Ajustează distanța față de stânga */
-}
 
         /* Gallery styles */
         .gallery {
             display: flex;
             justify-content: center;
-            margin-top: 50px; /* Adjusted margin for smaller screens */
+            margin-top: 50px;
         }
 
         .gallery img {
-            margin: 0 10px; /* Adjusted spacing between images */
-            max-width: 100%; /* Added to make images responsive */
+            margin: 0 10px;
+            max-width: 100%;
         }
 
         /* Game description styles */
         .game-description {
             text-align: center;
-            margin-top: 50px; /* Adjusted margin for smaller screens */
+            margin-top: 50px;
         }
 
         /* Call-to-action button styles */
         .cta-button {
             display: block;
-            width: 200px; /* Fixed width for button */
-            margin: 50px auto; /* Centered button with adjusted margin */
+            width: 200px;
+            margin: 50px auto;
             padding: 15px 20px;
             background-color: #007bff;
             color: #fff;
@@ -104,23 +87,30 @@
         /* Media query for smaller screens */
         @media only screen and (max-width: 768px) {
             nav {
-                padding: 10px; /* Further reduced padding for smaller screens */
+                padding: 10px;
             }
             nav a {
-                font-size: 16px; /* Further reduced font size for smaller screens */
+                font-size: 16px;
             }
             #company-name {
-                font-size: 16px; /* Further reduced font size for smaller screens */
+                font-size: 16px;
+                width: 100%;
+                text-align: center;
+                left: 0;
+            }
+            .software {
+                font-size: 12px;
+                top: 25px;
             }
             .gallery {
-                flex-direction: column; /* Stack images vertically on smaller screens */
+                flex-direction: column;
             }
             .game-description {
-                margin-top: 30px; /* Adjusted margin for smaller screens */
+                margin-top: 30px;
             }
             .cta-button {
-                width: 150px; /* Reduced width for smaller screens */
-                margin-top: 30px; /* Adjusted margin for smaller screens */
+                width: 150px;
+                margin-top: 30px;
             }
         }
     </style>
