@@ -21,7 +21,7 @@
             left: 0;
             background-color: #333;
             padding: 30px;
-            text-align: right 5%; 
+            text-align: right; 
             width: 100%;
         }
         
@@ -42,21 +42,22 @@
             font-weight: bold;
             z-index: 999;
             text-transform: uppercase;
-           
         }
+
+        /* Separate styles for each word */
         .sebi,
         .lex {
             padding: 1px 3px;
-            border-radius: 3px;   
-            
+            border-radius: 3px; /* Rounded corners for the border */
+        }
+
         .sebi {
-            
             background-color: red; /* Color for the "Sebi" word */
+            margin-right: 1px; /* Adjust distance between "Sebi" and "Lex" */
         }
 
         .lex {
-             margin-left: 0px
-             background-color: #ccc; /* Color for the "Lex" word */
+            background-color: #ccc; /* Color for the "Lex" word */
         }
 
         .software {
