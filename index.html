@@ -53,12 +53,11 @@
 
         .sebi {
             background-color: red; /* Color for the "Sebi" word */
-            margin-right: 5px; /* Ajustează distanța dintre "Sebi" și linie */
+            margin-right: var(--space-width, 5px); /* Ajustează distanța dintre "Sebi" și "Lex" */
         }
 
         .lex {
             background-color: #ccc; /* Color for the "Lex" word */
-            margin-left: 5px; /* Ajustează distanța dintre linie și "Lex" */
         }
 
         .software {
@@ -68,6 +67,11 @@
             position: absolute; /* Position the element absolutely */
             top: 30px; /* Adjust distance from the top */
             left: 20px; /* Adjust distance from the left */
+        }
+
+        /* Define the variable for space width */
+        :root {
+            --space-width: 10px; /* Default space width */
         }
 
         /* Gallery styles */
@@ -127,8 +131,8 @@
 </head>
 <body>
     <div id="company-name">
-        <span class="sebi">Sebi<span>
-        <span class="lex">Lex</>
+        <span class="sebi">Sebi</span>
+        <span class="lex">Lex</span>
         <span class="software">Software</span>
     </div>
     <nav>
@@ -157,3 +161,4 @@
     <a href="#" class="cta-button">Download Now!</a>
 </body>
 </html>
+
