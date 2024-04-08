@@ -21,7 +21,7 @@
             left: 0;
             background-color: #333;
             padding: 30px;
-            text-align: left; 
+            text-align: right; 
             width: 100%;
         }
         
@@ -34,7 +34,7 @@
 
         #company-name {
             position: fixed;
-            top: 5%; 
+            top: 50px; /* Ajustează distanța față de partea de sus */
             left: 11%; 
             transform: translateX(-50%); /* Centrare orizontală */
             font-size: 25px;
@@ -53,10 +53,12 @@
 
         .sebi {
             background-color: red; /* Color for the "Sebi" word */
+            margin-right: 5px; /* Ajustează distanța dintre "Sebi" și linie */
         }
 
         .lex {
             background-color: #ccc; /* Color for the "Lex" word */
+            margin-left: 5px; /* Ajustează distanța dintre linie și "Lex" */
         }
 
         .software {
@@ -126,6 +128,7 @@
 <body>
     <div id="company-name">
         <span class="sebi">Sebi</span>
+        <span>-</span> <!-- Linie de separare -->
         <span class="lex">Lex</span>
         <span class="software">Software</span>
     </div>
