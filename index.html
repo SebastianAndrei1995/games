@@ -18,11 +18,11 @@
         nav {
             position: fixed;
             top: 0;
-            right: 5px;
+            right: 5px; /* Adjusted positioning to leave a margin on the right */
             background-color: #333;
-            padding: 1px;
-            text-align: right; 
-            width: 100%;
+            padding: 30px;
+            text-align: right; /* Align the text to the right */
+            width: calc(100% - 10px); /* Adjusted width to account for the margin on both sides */
         }
         
         nav a {
@@ -34,8 +34,8 @@
 
         #company-name {
             position: fixed;
-            top: 20px; /* Ajustează distanța față de partea de sus */
-            left: 10%; 
+            top: 30px; /* Ajustează distanța față de partea de sus */
+            left: 5%; 
             transform: translateX(-50%); /* Centrare orizontală */
             font-size: 25px;
             color: #fff;
@@ -121,6 +121,11 @@
                 width: 150px; /* Reduced width for smaller screens */
                 margin-top: 30px; /* Adjusted margin for smaller screens */
             }
+        }
+
+        h1, p {
+            text-align: center; /* Center align the h1 and p elements */
+            margin-left: 50px; /* Add margin to the left side */
         }
     </style>
 </head>
