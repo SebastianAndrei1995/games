@@ -159,6 +159,16 @@
         <!-- Add similar descriptions for other games -->
     </div>
     <a href="https://www.amazon.com/gp/product/B0CTTTRTBV" class="cta-button">Download Now!</a>
+       <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            this.classList.add("loading"); // Adaugă clasa "loading" la buton când este apăsat
+
+            // După 2 secunde, elimină clasa "loading" pentru a opri efectul de rotație
+            setTimeout(function() {
+                document.getElementById("downloadButton").classList.remove("loading");
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
 
