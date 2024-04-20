@@ -160,7 +160,7 @@
     </div>
     <a href="https://www.amazon.com/gp/product/B0CTTTRTBV" class="cta-button" id="downloadButton">Download Now!</a>
 
-    <script>
+   <script>
         // Get the button element by its id
         var downloadButton = document.getElementById('downloadButton');
 
@@ -172,7 +172,11 @@
             // Optionally, you can also change other styles such as background color
             downloadButton.style.backgroundColor = 'green';
 
-            // You can also redirect the user to another page or perform other actions here
+            // Set a timeout to revert the button after 2 seconds
+            setTimeout(function() {
+                downloadButton.innerText = 'Download Now';
+                downloadButton.style.backgroundColor = '#007bff'; // Revert to original color
+            }, 2000);
         });
     </script>
 </body>
