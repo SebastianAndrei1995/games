@@ -167,14 +167,14 @@
         // Add event listener to the button
         downloadButton.addEventListener('click', function() {
             // Change the text of the button
-            downloadButton.innerText = 'Downloading...';
+            downloadButton.innerText = 'Redirecting...';
 
             // Optionally, you can also change other styles such as background color
             downloadButton.style.backgroundColor = 'green';
 
             // Set a timeout to revert the button after 2 seconds
             setTimeout(function() {
-                downloadButton.innerText = 'Download Now';
+                downloadButton.innerText = 'Download Now!';
                 downloadButton.style.backgroundColor = '#007bff'; // Revert to original color
             }, 2000);
         });
