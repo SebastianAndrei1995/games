@@ -159,6 +159,21 @@
         <!-- Add similar descriptions for other games -->
     </div>
     <a href="https://www.amazon.com/gp/product/B0CTTTRTBV" class="cta-button">Download Now!</a>
+     <script>
+        // Get the button element by its id
+        var downloadButton = document.getElementById('downloadButton');
+
+        // Add event listener to the button
+        downloadButton.addEventListener('click', function() {
+            // Change the text of the button
+            downloadButton.innerText = 'Downloading...';
+
+            // Optionally, you can also change other styles such as background color
+            downloadButton.style.backgroundColor = 'green';
+
+            // You can also redirect the user to another page or perform other actions here
+        });
+    </script>
 </body>
 </html>
 
