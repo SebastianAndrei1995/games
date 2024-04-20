@@ -7,12 +7,157 @@
     <meta name="keywords" content="games, download, modern, play, fun">
     <title>Sebi Lex Software - Android Games</title>
     <style>
-        /* Your CSS styles here */
+        /* Common styles */
+        body {
+            font-family: 'Arial Aldin', Arial, sans-serif;
+            font-weight: bold; /* Make all text bold */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation styles */
+        nav {
+            position: fixed;
+            top: 0;
+            background-color: #333;
+            padding: 32px;
+            padding-left: 350px; /* Adjust this value as needed */
+            text-align: center;
+            width: 100%;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #fff;      
+            text-decoration: none;
+            font-size: 25px; /* Reduced font size for smaller screens */ 
+        }
+
+        nav a[href="#home"] {
+            color: red; /* Set the text color to red for the "Home" link */
+        }
+
+        #company-name {
+            position: fixed;
+            top: 30px; /* Adjust distance from the top */
+            left: 10%; 
+            transform: translateX(-50%); /* Center horizontally */
+            font-size: 25px;
+            color: #fff;
+            font-weight: bold;
+            z-index: 999;
+            text-transform: uppercase;
+        }
+
+        /* Separate styles for each word */
+        .sebi,
+        .lex {
+            padding: 0px 1px;
+            border-radius: 4px; /* Rounded corners for the border */
+        }
+
+        .sebi {
+            background-color: red; /* Color for the "Sebi" word */
+        }
+
+        .lex {
+            background-color: #ccc; /* Color for the "Lex" word */
+        }
+
+        .software {
+            color: red; /* Change the color to red */
+            font-size: 15px; /* Font size for the "software" text */
+            display: block; /* Display "Software" on a new line */
+            position: absolute; /* Position absolutely */
+            top: 30px; /* Adjust distance from the top */
+            left: 15px; /* Adjust distance from the left */
+        }
+
+        /* Gallery styles */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px; /* Adjusted margin for smaller screens */
+        }
+
+        .gallery img {
+            margin: 0 10px; /* Adjusted spacing between images */
+            max-width: 100%; /* Make images responsive */
+        }
+        .game-description {
+            text-align: center;
+            margin-top: 50px; /* Adjusted margin for smaller screens */
+        }
+        /* Call-to-action button styles */
+        .cta-button {
+            display: block;
+            width: 200px; /* Fixed width for button */
+            margin: 50px auto; /* Centered button with adjusted margin */
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        /* Media query for smaller screens */
+        @media only screen and (max-width: 768px) {
+            nav {
+                padding: 10px; /* Further reduced padding for smaller screens */
+            }
+            nav a {
+                font-size: 16px; /* Further reduced font size for smaller screens */
+            }
+            #company-name {
+                font-size: 16px; /* Further reduced font size for smaller screens */
+            }
+            .gallery {
+                flex-direction: column; /* Stack images vertically on smaller screens */
+            }
+            .game-description {
+                margin-top: 30px; /* Adjusted margin for smaller screens */
+            }
+            .cta-button {
+                width: 150px; /* Reduced width for smaller screens */
+                margin-top: 30px; /* Adjusted margin for smaller screens */
+            }
+        }
+        
+        h1 {
+            text-align: center;         
+            margin-top: 100px; /* Add margin from the top */
+        }
     </style>
 </head>
 <body>
-    <!-- Your HTML content here -->
+    <div id="company-name">
+        <span class="sebi">Sebi</span>
+        <span class="lex">Lex</span>
+        <span class="software">Software</span>
+    </div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <h1>Welcome to My Games Page!</h1>
+    <ul>
+        <li><a href="https://www.amazon.com/gp/product/B0CTTTRTBV">Bow Master</a></li>
+        <li><a href="#">Game 2</a></li> <!-- Placeholder link -->
+    </ul>
 
+    <!-- Gallery of images -->
+    <div class="gallery">
+        <img src="https://github.com/SebastianAndrei1995/games/blob/main/1080.jpeg?raw=true" alt="Bow Master Screenshot" width="300" height="150">
+        <!-- Add more images with proper src and alt attributes -->
+    </div>
+
+    <div class="game-description">
+        <h2>Bow Master</h2>
+        <p>A captivating archery game that tests your precision and speed. Download and play now to become the master archer!</p>
+        <!-- Add similar descriptions for other games -->
+    </div>
     <a href="https://www.amazon.com/gp/product/B0CTTTRTBV" class="cta-button" id="downloadButton">Download Now!</a>
 
     <script>
@@ -32,5 +177,4 @@
     </script>
 </body>
 </html>
-
 
