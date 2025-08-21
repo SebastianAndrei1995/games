@@ -7,7 +7,6 @@
 <meta name="keywords" content="games, download, modern, play, fun">
 <title>Sebi Lex Software - Android Games</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -229,6 +228,32 @@ window.addEventListener('mousemove', e => {
             p.x -= dx * 0.001;
             p.y -= dy * 0.001;
         }
+    });
+});
+
+// Scroll parallax și animație
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    // Titlu parallax și fade
+    const titleSpans = document.querySelectorAll('#main-title span');
+    titleSpans.forEach((span, i) => {
+        span.style.transform = `translateY(${scrollY*0.2}px)`;
+        span.style.opacity = Math.max(0, Math.min(1, 1 - scrollY/500));
+    });
+
+    // Carduri parallax și fade
+    cards.forEach((card, i) => {
+        const rect = card.getBoundingClientRect();
+        const offset = rect.top - window.innerHeight/1.5;
+        card.style.transform = `translateY(${offset*0.05}px)`;
+        card.style.opacity = Math.max(0, Math.min(1, 1 - offset/500));
+    });
+
+    // Particule reactioneaza la scroll subtil
+    particles.forEach(p=>{
+        p.y -= scrollY*0.0005; // foarte subtil
+        if(p.y < 0) p.y = canvas.height;
     });
 });
 
