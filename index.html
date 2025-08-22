@@ -28,7 +28,7 @@ body {
 header {
     background: rgba(51,51,51,0.9);
     color:#fff;
-    padding:15px 20px;
+    padding:12px 16px;
     display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;
     position: sticky; top:0; z-index:999;
 }
@@ -39,17 +39,17 @@ header {
 .lex { background:#ccc; padding:3px 6px; border-radius:3px; color:#000; }
 .software { font-size:12px; color:red; margin-left:5px; }
 
-nav { display:flex; gap:15px; flex-wrap:wrap; }
+nav { display:flex; gap:12px; flex-wrap:wrap; }
 nav a { color:#fff; text-decoration:none; font-weight:600; padding:6px 10px; border-radius:4px; transition: all 0.3s; }
 nav a:hover { background:#fff; color:#333; transform: scale(1.1) rotate(2deg); }
 
 /* Title */
-h1 { text-align:center; margin:60px 0 30px; font-size:2.2rem; color:#fff; text-shadow:1px 1px 5px rgba(0,0,0,0.5); opacity:0; transform:translateY(20px); transition: all 0.7s ease-out; }
+h1 { text-align:center; margin:50px 0 25px; font-size:2.2rem; color:#fff; text-shadow:1px 1px 5px rgba(0,0,0,0.5); opacity:0; transform:translateY(20px); transition: all 0.7s ease-out; padding:0 10px; }
 h1.visible { opacity:1; transform:translateY(0); }
 h1 span { display:inline-block; transition: transform 0.3s ease, color 0.3s ease; }
 
 /* Games grid */
-.games-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; max-width:1200px; margin:0 auto 50px; padding:0 20px; z-index:1; position:relative; }
+.games-container { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; max-width:1200px; margin:0 auto 40px; padding:0 15px; z-index:1; position:relative; }
 
 .game-card {
     background: rgba(255,255,255,0.95);
@@ -74,19 +74,33 @@ h1 span { display:inline-block; transition: transform 0.3s ease, color 0.3s ease
 .game-card h2 { margin:15px 0 10px; transition: transform 0.3s; }
 .game-card:hover h2 { transform: scale(1.05); }
 
-.game-card p { padding:0 15px; font-size:0.95rem; margin-bottom:15px; color:#555; transition: transform 0.3s; }
+.game-card p { padding:0 15px; font-size:0.95rem; margin-bottom:15px; color:#555; }
 
 /* Buttons */
 .cta-button {
-    background:#ff3b3b; color:#fff; text-decoration:none; padding:12px 25px; border-radius:8px; font-weight:700; transition: all 0.3s ease, box-shadow 0.4s ease;
+    background:#ff3b3b; color:#fff; text-decoration:none; padding:14px 28px; border-radius:10px; font-weight:700; transition: all 0.3s ease, box-shadow 0.4s ease;
 }
 .cta-button:hover { transform: scale(1.12) rotate(-1deg); box-shadow: 0 0 20px rgba(255,59,59,0.8), 0 0 30px rgba(255,59,59,0.5); }
 .cta-button:active { transform: scale(0.95) rotate(0deg); box-shadow: 0 0 10px rgba(255,59,59,0.5); }
 
 /* Footer */
-footer { text-align:center; padding:20px; background: rgba(51,51,51,0.9); color:#fff; }
+footer { text-align:center; padding:15px; background: rgba(51,51,51,0.9); color:#fff; }
 
-@media(max-width:500px){ h1{ font-size:1.5rem; } }
+/* RESPONSIVE */
+@media(max-width:768px){
+    h1 { font-size:1.8rem; margin:40px 0 20px; }
+    nav { justify-content:center; margin-top:10px; }
+    .game-card { margin:0 auto; width:90%; }
+    .cta-button { padding:12px 22px; font-size:1rem; }
+}
+@media(max-width:500px){
+    h1{ font-size:1.4rem; margin:30px 0 15px; }
+    header { flex-direction:column; align-items:flex-start; }
+    nav { width:100%; justify-content:flex-start; gap:8px; }
+    .game-card { width:100%; }
+    .game-card p { font-size:0.9rem; }
+    .cta-button { width:80%; text-align:center; font-size:1rem; }
+}
 </style>
 </head>
 <body>
@@ -169,6 +183,7 @@ cards.forEach(card => observerCards.observe(card));
 // 3D tilt effect
 cards.forEach(card => {
     card.addEventListener('mousemove', e => {
+        if(window.innerWidth < 768) return; // dezactivează tilt pe mobil
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -187,7 +202,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles = [];
-const particleCount = 80;
+const particleCount = window.innerWidth < 600 ? 40 : 80; // mai puține pe mobil
 for(let i=0;i<particleCount;i++){
     particles.push({
         x: Math.random()*canvas.width,
@@ -215,47 +230,6 @@ function animateParticles(){
     requestAnimationFrame(animateParticles);
 }
 animateParticles();
-
-// Particles follow cursor subtly
-window.addEventListener('mousemove', e => {
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-    particles.forEach(p => {
-        const dx = mouseX - p.x;
-        const dy = mouseY - p.y;
-        const dist = Math.sqrt(dx*dx + dy*dy);
-        if(dist < 150){
-            p.x -= dx * 0.001;
-            p.y -= dy * 0.001;
-        }
-    });
-});
-
-// Scroll parallax și animație
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-
-    // Titlu parallax și fade
-    const titleSpans = document.querySelectorAll('#main-title span');
-    titleSpans.forEach((span, i) => {
-        span.style.transform = `translateY(${scrollY*0.2}px)`;
-        span.style.opacity = Math.max(0, Math.min(1, 1 - scrollY/500));
-    });
-
-    // Carduri parallax și fade
-    cards.forEach((card, i) => {
-        const rect = card.getBoundingClientRect();
-        const offset = rect.top - window.innerHeight/1.5;
-        card.style.transform = `translateY(${offset*0.05}px)`;
-        card.style.opacity = Math.max(0, Math.min(1, 1 - offset/500));
-    });
-
-    // Particule reactioneaza la scroll subtil
-    particles.forEach(p=>{
-        p.y -= scrollY*0.0005; // foarte subtil
-        if(p.y < 0) p.y = canvas.height;
-    });
-});
 
 window.addEventListener('resize', ()=>{ canvas.width=window.innerWidth; canvas.height=window.innerHeight; });
 </script>
